@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ firewall }}"
+- hosts: firewall
   gather_facts: yes
   tasks:
     
