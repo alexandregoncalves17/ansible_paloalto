@@ -5,6 +5,7 @@
     provider: "{{ provider }}"
     ntp_server_primary: "{{ primary_ntp }}"
     ntp_server_secondary: "{{ secondary_ntp | default(omit) }}"
+    timezone: "{{ timezone }}"
 
 - name: Commit the change
   delegate_to: localhost

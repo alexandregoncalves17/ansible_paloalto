@@ -12,3 +12,4 @@ provider:
 primary_dns: 8.8.8.8
 primary_ntp: 2.pt.pool.ntp.org
 secondary_ntp: 0.europe.pool.ntp.org
+timezone: Europe/Lisbon
