@@ -1,0 +1,15 @@
+---
+- name: Prompt
+  vars_prompt:
+    - name: primary_dns
+      prompt: "What is the primary dns?"
+      private: no
+    - name: secondary_dns
+      prompt: "What is the secondary dns? (Not Required)"
+      private: no
+
+- name: Set dns servers
+  paloaltonetworks.panos.panos_mgtconfig:
+    provider: "{{ provider }}"
+    dns_server_primary: "{{ primary_dns }}"
+    dns_server_secondary: "{{ secondary_dns | default(omit) }}"

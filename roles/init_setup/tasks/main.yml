@@ -2,3 +2,12 @@
 # Change admin default password
 - name: Import change admin default pw tasks
   ansible.builtin.import_tasks: admin_pw.yml
+  tags:
+    - never
+    - adminpw
+
+- name: Import dns configuration tasks
+  ansible.builtin.import_tasks: admin_pw.yml
+  tags:
+    - never
+    - dns
