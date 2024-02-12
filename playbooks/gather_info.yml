@@ -1,6 +1,6 @@
 ---
 - hosts: firewall
-  gather_facts: false
+  gather_facts: true
   tasks:
     
     - name: Import role gather information
