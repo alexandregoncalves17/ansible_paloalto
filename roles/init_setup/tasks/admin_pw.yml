@@ -1,0 +1,7 @@
+---
+- name: Change admin user pw
+  paloaltonetworks.panos.panos_administrator:
+    provider: '{{ provider }}'
+    admin_username: 'foo'
+    admin_password: 'secret'
+    superuser: true

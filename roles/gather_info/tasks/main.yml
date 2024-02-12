@@ -1,0 +1,11 @@
+---
+# Get system information
+- name: Get the system info
+  paloaltonetworks.panos.panos_op:
+    provider: "{{ inventory_hostname }}"
+    cmd: show system info
+  register: system_info
+
+- name: Debug system info
+  ansible.builtin.debug:
+    var: system_info
