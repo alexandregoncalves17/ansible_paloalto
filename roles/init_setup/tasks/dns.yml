@@ -1,5 +1,6 @@
 ---
 - name: Set dns servers
+  delegate_to: localhost
   paloaltonetworks.panos.panos_mgtconfig:
     provider: "{{ provider }}"
     dns_server_primary: "{{ primary_dns }}"
