@@ -1,4 +1,11 @@
 ---
+#Change interface mgmt ip
+- name: Import change interface mgmt ip tasks
+  ansible.builtin.import_tasks: banner.yml
+  tags:
+    - never
+    - interface_mgmt
+
 # Change admin default password
 - name: Import change admin default pw tasks
   ansible.builtin.import_tasks: admin_pw.yml
