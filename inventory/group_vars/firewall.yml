@@ -3,5 +3,6 @@ ansible_python_interpreter: /usr/bin/python3
 ansible_password: admin
 ansible_user: admin
 provider:
+  ip_address: "{{ inventory_hostname }}"
   username: admin
-  password: admin
+  password: Qwe123456#
