@@ -11,3 +11,9 @@
   tags:
     - never
     - dns
+
+- name: Import ntp configuration tasks
+  ansible.builtin.import_tasks: ntp.yml
+  tags:
+    - never
+    - ntp
