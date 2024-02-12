@@ -1,8 +1,12 @@
 ---
 - hosts: firewall
-  gather_facts: false
+  gather_facts: true
   tasks:
     
+    - name: Debug
+      ansible.builtin.debug:
+        var: ansible_facts
+
     - name: Import role gather information
       ansible.builtin.import_role:
         name: gather_info
