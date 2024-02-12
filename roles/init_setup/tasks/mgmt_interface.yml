@@ -1,14 +1,10 @@
 ---
 - name: Configure new ip for interface mgmt
   delegate_to: localhost
-  paloaltonetworks.panos.panos_interface:
+  paloaltonetworks.panos.panos_type_cmd:
     provider: "{{ provider }}"
-    if_name: "Management"
-    ip: "{{ management_ip }}"
-    mode: layer3
-    enable_dhcp: false
-    state: merged
-
+    cmd: "set deviceconfig system ip-address {{ management_ip }} netmask {{ subnet_mask }}"
+    
 #- name: Commit the change
 #  delegate_to: localhost
 #  paloaltonetworks.panos.panos_commit_firewall:
