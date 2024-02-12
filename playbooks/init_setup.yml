@@ -1,15 +1,7 @@
 ---
 - hosts: firewall
   gather_facts: false
-  vars_prompt:
-    - name: primary_dns
-      prompt: "What is the primary dns?"
-      private: no
-      tags: dns
-    - name: secondary_dns
-      prompt: "What is the secondary dns? (Not Required)"
-      private: no
-      tags: dns
+  
   tasks:
 
     - name: Import role gather information

@@ -6,3 +6,7 @@ provider:
   ip_address: "{{ inventory_hostname }}"
   username: admin
   password: Qwe123456#
+
+
+
+primary_dns: 8.8.8.8
