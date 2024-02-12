@@ -5,3 +5,8 @@
     provider: "{{ provider }}"
     dns_server_primary: "{{ primary_dns }}"
     dns_server_secondary: "{{ secondary_dns | default(omit) }}"
+
+- name: Commit the change
+  paloaltonetworks.panos.panos_commit_firewall:
+    provider: "{{ provider }}"
+    description: Change DNS
