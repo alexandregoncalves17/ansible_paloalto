@@ -1,0 +1,13 @@
+---
+- name: Set ntp servers
+  delegate_to: localhost
+  paloaltonetworks.panos.panos_mgtconfig:
+    provider: "{{ provider }}"
+    ntp_server_primary: "{{ primary_ntp }}"
+    ntp_server_secondary: "{{ secondary_ntp | default(omit) }}"
+
+- name: Commit the change
+  delegate_to: localhost
+  paloaltonetworks.panos.panos_commit_firewall:
+    provider: "{{ provider }}"
+    description: Change ntp
