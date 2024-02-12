@@ -1,6 +1,7 @@
 ---
 # Get system information
 - name: Get the system info
+  delegate_to: localhost
   paloaltonetworks.panos.panos_op:
     provider: "{{ provider }}"
     cmd: show system info
