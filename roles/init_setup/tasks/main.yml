@@ -7,7 +7,7 @@
     - adminpw
 
 - name: Import dns configuration tasks
-  ansible.builtin.import_tasks: admin_pw.yml
+  ansible.builtin.import_tasks: dns.yml
   tags:
     - never
     - dns
