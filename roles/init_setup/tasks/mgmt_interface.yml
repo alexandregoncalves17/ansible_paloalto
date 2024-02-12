@@ -5,7 +5,9 @@
     provider: "{{ provider }}"
     if_name: "Management"
     ip: "{{ management_ip }}"
+    mode: layer3
     enable_dhcp: false
+    state: merged
 
 #- name: Commit the change
 #  delegate_to: localhost
