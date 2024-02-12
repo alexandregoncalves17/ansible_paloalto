@@ -1,7 +1,10 @@
 ---
-- name: Change admin user pw
-  paloaltonetworks.panos.panos_administrator:
-    provider: "{{ provider }}"
-    admin_username: "admin"
-    admin_password: "Qwe123456#"
-    superuser: true
+- name: set admin password
+  paloaltonetworks.panos.panos_admpwd:
+    ip_address: "192.168.251.54"
+    username: "admin"
+    key_filename: "~/.ssh/id_rsa.pub"
+    newpassword: "Qwe123456#"
+  register: result
+  retries: 10
+  delay: 30
