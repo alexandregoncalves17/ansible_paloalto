@@ -1,0 +1,8 @@
+---
+- hosts: firewall
+  gather_facts: false
+  tasks:
+
+    - name: Import role gather information
+      ansible.builtin.import_role:
+        name: init_setup
