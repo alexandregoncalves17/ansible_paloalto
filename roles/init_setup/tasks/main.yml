@@ -1,7 +1,7 @@
 ---
 #Change interface mgmt ip
 - name: Import change interface mgmt ip tasks
-  ansible.builtin.import_tasks: banner.yml
+  ansible.builtin.import_tasks: mgmt_interface.yml
   tags:
     - never
     - interface_mgmt
