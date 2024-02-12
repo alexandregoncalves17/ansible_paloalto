@@ -10,5 +10,5 @@ provider:
 
 
 primary_dns: 8.8.8.8
-ntp_server_primary: 2.pt.pool.ntp.org
-ntp_server_secondary: 0.europe.pool.ntp.org
+primary_ntp: 2.pt.pool.ntp.org
+secondary_ntp: 0.europe.pool.ntp.org
