@@ -1,5 +1,7 @@
 ---
 ansible_connection: local
+ansible_user: admin
+ansible_password: admin
 provider:
   username: admin
   password: admin
