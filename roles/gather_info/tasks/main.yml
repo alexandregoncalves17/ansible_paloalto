@@ -2,7 +2,7 @@
 # Get system information
 - name: Get the system info
   paloaltonetworks.panos.panos_op:
-    provider: "{{ inventory_hostname }}"
+    provider: "{{ provider }}"
     cmd: show system info
   register: system_info
 
