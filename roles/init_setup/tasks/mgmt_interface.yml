@@ -1,14 +1,13 @@
 ---
-- name: Configure Management Interface
-  delegate_to: localhost
-  paloaltonetworks.panos.panos_mgtconfig:
+- name: Configure new ip for interface mgmt
+  paloaltonetworks.panos.panos_interface:
     provider: "{{ provider }}"
-    ip_address: "{{ management_ip }}"
-    netmask: "{{ subnet_mask }}"
-    default_gateway: "{{ default_gateway }}"
+    if_name: "Management"
+    ip: "{{ management_ip }}"
+    enable_dhcp: false
 
-- name: Commit the change
-  delegate_to: localhost
-  paloaltonetworks.panos.panos_commit_firewall:
-    provider: "{{ provider }}"
-    description: Change management ip interface
+#- name: Commit the change
+#  delegate_to: localhost
+#  paloaltonetworks.panos.panos_commit_firewall:
+#    provider: "{{ provider }}"
+#    description: Change management ip interface
