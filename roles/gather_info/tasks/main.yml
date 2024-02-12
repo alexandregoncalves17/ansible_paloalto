@@ -9,4 +9,4 @@
 
 - name: Debug system info
   ansible.builtin.debug:
-    var: system_info
+    var: system_info.stdout
