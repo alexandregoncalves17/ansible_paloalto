@@ -3,8 +3,8 @@
   delegate_to: localhost
   paloaltonetworks.panos.panos_type_cmd:
     provider: "{{ provider }}"
-    cmd: "set deviceconfig system ip-address {{ management_ip }} netmask {{ subnet_mask }}"
-    
+    xpath: /config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/ip-address
+
 #- name: Commit the change
 #  delegate_to: localhost
 #  paloaltonetworks.panos.panos_commit_firewall:
