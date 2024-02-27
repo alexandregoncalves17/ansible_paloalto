@@ -1,6 +1,6 @@
 ---
 collections:
-  - community.general
-  - ansible.posix
-  - ansible.netcommon
-  - paloaltonetworks.panos
+  - name: community.general
+  - name: ansible.posix
+  - name: ansible.netcommon
+  - name: paloaltonetworks.panos
