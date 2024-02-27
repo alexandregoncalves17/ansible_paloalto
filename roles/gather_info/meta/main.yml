@@ -1,0 +1,7 @@
+---
+# Install a collection from Ansible Galaxy.
+collections:
+  - community.general
+  - ansible.posix
+  - ansible.netcommon
+  - paloaltonetworks.panos
