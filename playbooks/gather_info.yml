@@ -1,5 +1,5 @@
 ---
-- hosts: Firewall
+- hosts: 192.168.251.54
   gather_facts: false
   tasks:
     
